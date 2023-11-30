@@ -5,10 +5,10 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        body: GradientContainer(
-          Colors.deepOrange,
-          Colors.deepOrange.shade200,
-        ),
+        body: GradientContainer.green(),
+        //   Colors.deepOrange,
+        //   Colors.deepOrange.shade200,
+        // ),
       ),
     ),
   );

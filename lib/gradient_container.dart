@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
 
 class GradientContainer extends StatelessWidget {
-  const GradientContainer(this.colorInicio, this.colorFin, {super.key});
+  GradientContainer(this.colorInicio, this.colorFin, {super.key});
+  GradientContainer.green({super.key})
+      : colorInicio = Colors.green,
+        colorFin = Colors.greenAccent;
 
   final Color colorInicio;
   final Color colorFin;
+  var activeDiceImage = 'assets/images/dice-1.png';
 
-  void rollDice() {}
+  void rollDice() {
+    activeDiceImage = 'assets/images/dice-2.png';
+    print('Dice 2');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +30,7 @@ class GradientContainer extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Image.asset(
-            'assets/images/dice-1.png',
+            activeDiceImage,
             width: 200,
           ),
           TextButton(
